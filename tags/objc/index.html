@@ -5,11 +5,11 @@
   
 
   
-  <title>艺哲云</title>
+  <title>标签: objc | 艺哲云</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="艺哲云">
-<meta property="og:url" content="https://yizheyun.cn/index.html">
+<meta property="og:url" content="https://yizheyun.cn/tags/objc/index.html">
 <meta property="og:site_name" content="艺哲云">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
@@ -62,83 +62,36 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-ObjC-GCD串行队列" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/04/ObjC-GCD串行队列/" class="article-date">
-  <time datetime="2019-08-04T06:30:14.000Z" itemprop="datePublished">2019-08-04</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/08/04/ObjC-GCD串行队列/" class="archive-article-date">
+  <time datetime="2019-08-04T06:30:14.000Z" itemprop="datePublished">8月 4</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/ObjC-GCD串行队列/">ObjC GCD串行队列</a>
+      <a class="archive-article-title" href="/2019/08/04/ObjC-GCD串行队列/">ObjC GCD串行队列</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 通过设置串行队列，可以安排任务依次进行，便于管理。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 任务组</span><br><span class="line">dispatch_group_t group = dispatch_group_create();</span><br><span class="line">        </span><br><span class="line">// 任务</span><br><span class="line">dispatch_queue_t queue = dispatch_queue_create(&quot;myqueue&quot;,DISPATCH_QUEUE_SERIAL);</span><br><span class="line">        </span><br><span class="line">// 信号量</span><br><span class="line">dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);</span><br><span class="line"></span><br><span class="line">dispatch_group_enter(group); // 进入群组</span><br><span class="line">dispatch_group_async(group, queue, ^&#123;</span><br><span class="line">    dispatch_group_leave(group); // 离开群组</span><br><span class="line">    dispatch_semaphore_signal(semaphore); // 注销信号量</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 任务全部完成</span><br><span class="line">dispatch_group_notify(group, queue, ^&#123;</span><br><span class="line">    NSLog(@&quot;====test 完成全部任务&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://yizheyun.cn/2019/08/04/ObjC-GCD串行队列/" data-id="cjywlcoap0000h2dwlrvddwmm" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objc/">objc</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-welcome" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/02/welcome/" class="article-date">
-  <time datetime="2019-08-02T13:35:27.804Z" itemprop="datePublished">2019-08-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/02/welcome/">欢迎光临本网站</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎光临本网站</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://yizheyun.cn/2019/08/02/welcome/" data-id="cjywlcoau0001h2dw0squnxd8" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
+    </div></section>
   
 
 
